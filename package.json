@@ -1,0 +1,16 @@
+{
+  "name": "bk-proxy-server",
+  "version": "1.0.0",
+  "description": "代理服务器demo",
+  "main": "index.js",
+  "repository": "git@gitee.com:BaboonKing/bk-proxy-server.git",
+  "author": "changfan.xu",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "superagent": "^6.1.0"
+  }
+}
