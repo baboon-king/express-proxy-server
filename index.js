@@ -7,7 +7,7 @@ const app = express()
 // create application/json parser
 app.use(bodyParser.json({ limit: '50mb' }));
 // create application/x-www-form-urlencoded parser
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: false }));
 
 
 // target api
@@ -71,7 +71,6 @@ function handleResp(err, nres, res) {
   if (err) {
     nres.json({ "msg": "请求发生错误可能是api地址无效或者Accept设置不正确或者请求方式错误" });
   } else {
-    console.log(res);
     if (JSON.stringify(res.body) == "{}") {
       var text = res.text;
       if (text.charAt(0) == "{" && text.charAt(text.length - 1) == "}") {

@@ -7,7 +7,7 @@ requestPayload = {
 request({
   url: '/market/goods/list',
   method: "post",
-  requestPayload
+  data: requestPayload
 }).then(res => {
   console.log(res);
 })
